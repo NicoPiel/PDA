@@ -122,3 +122,22 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Sklearn stuff
+
+*/sklearn_version.json
+
+# Qiime2 Artifacts
+
+*.qza
+*.qzv
+
+# Downloads and other formats
+*.fastq
+*.fastq.gz
+*.fasta
+*.tar
+*.gz
+*.log
+*.tsv
+*.csv
