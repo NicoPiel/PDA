@@ -1,0 +1,19 @@
+1. Daten importieren (Casava Single End)
+qiime tools import --type 'SampleData[SequencesWithQuality]' --input-path qiime_import --input-format CasavaOneEightSingleLanePerSampleDirFmt --output-path demux-single-end.qza
+
+2. Demux Sumerize (demux-single-end.qzv erstellen)
+qiime demux summarize --i-data demux-single-end.qza --o-visualization demux-single-end.qzv
+
+3. Deblur quality filter (demux-filtered.qza und demux-filter-stats.qza) 
+qiime quality-filter q-score --i-demux demux-single-end.qza --o-filtered-sequences demux-filtered.qza --o-filter-stats demux-filter-stats.qza
+
+4. Deblur denoise 16S (FeatureTable)
+qiime deblur denoise-16S --i-demultiplexed-seqs demux-filtered.qza --p-trim-length 90 --o-representative-sequences rep-seqs-deblur.qza --o-table table-deblur.qza --verbose --p-sample-stats --p-jobs-to-start 8 --o-stats deblur-stats.qza
+
+5. Phylogenetic Trees erstellen
+qiime phylogeny align-to-tree-mafft-fasttree   --i-sequences rep-seqs.qza   --o-alignment aligned-rep-seqs.qza   --o-masked-alignment masked-aligned-rep-seqs.qza   --o-tree unrooted-tree.qza   --o-rooted-tree rooted-tree.qza
+
+6. Diversity Core Metrics
+qiime diversity core-metrics-phylogenetic --i-phylogeny rooted-tree.qza --i-table table.qza --p-sampling-depth 1103 --m-metadata-file metadata.txt --output-dir core-metrics-results
+                 
+7. Pcoa noch mal extra auf der Distance Matrix ausführen, da mit dem vorherigen Befehl die direkt generierten Pcoa-results nicht korrekt exportiert wurden.
