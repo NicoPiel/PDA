@@ -127,8 +127,6 @@ dmypy.json
 
 */sklearn_version.json
 
-# Qiime2 Artifacts
-
 *.qza
 *.qzv
 
