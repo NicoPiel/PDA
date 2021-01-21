@@ -1,8 +1,6 @@
 
 =
 project.ipynb,d\e\de15f4cff83943c9604ec50c0eee451c4acbf853
-^
-.Analyse/Taxonomie/NeuralNetwork/Untitled.ipynb,e\f\efdae963def2084f945eab84f04c0c1005d1ace8
 ‰
 YAnalyse/Taxonomie/Plane&Random_Forest/Braycurtis/random_forest_braycurtis_taxonomie.ipynb,4\d\4dd2e0aef2f9322684b7ba2b602a87194cdf791d
 {
@@ -15,3 +13,5 @@ Q
 !Analyse/NeuralNetwork/TaxNN.ipynb,0\9\09e20dbfad1970bde279ae6e9e99e6b5fb82b367
 R
 "Analyse/NeuralNetwork/OTU_NN.ipynb,9\7\97c49ab86916e053901c1d8dabca09cc0fce7da5
+d
+4Analyse mit SplitFunction/NeuralNetwork/OTU_NN.ipynb,5\d\5d6670a3944509f52001359478e212f9a4865ecd
