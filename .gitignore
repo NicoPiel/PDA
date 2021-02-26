@@ -125,7 +125,7 @@ dmypy.json
 
 # Sklearn stuff
 
-*/sklearn_version.json
+*sklearn_version.json
 
 *.qza
 *.qzv
